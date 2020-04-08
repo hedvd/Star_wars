@@ -1,4 +1,30 @@
+  /*Estilos y clases desarrolladas por el equipo*/
+  /*Estilos para el Header del proyecto*/
+  .logo{
+    padding-left: 1rem;
+    /* color: #f7da33; Amarillo*/
+    color: honeydew;
+  }
+  .titulo{
+    font-family: 'Baloo 2';
+    font-size: 2rem;
+    padding-left: .5rem;
+    /* color: #f7da33; Amarillo*/
+    color: honeydew;
+  }
+  .titulo2{
+    width: 80%;
+    text-align: center;
+    font-family: 'Baloo 2';
+    font-size: 1.5rem;
+    /* color: #f7da33; Amarillo*/
+    color: honeydew;  
+    letter-spacing: 1px;
+  }
 
+
+  /*Clases y elementos a reutilizar del archivo original*/
+  
   :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
