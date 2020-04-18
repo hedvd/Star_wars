@@ -5,7 +5,7 @@
     box-shadow: #c6d3c6 0px 3px 5px;
   }
   .logo{
-    padding-left: 1rem;
+    padding-left: 2rem;
     color: honeydew;
   }
   .titulo{
@@ -15,12 +15,23 @@
     color: honeydew;
   }
   .titulo2{
-    width: 80%;
+    width: 60%;
     text-align: center;
     font-family: 'Baloo 2';
     font-size: 1.5rem;
     color: honeydew; 
     letter-spacing: 1px;
+  }
+  .linkAPI{
+    font-size: .8rem;
+    color:honeydew;
+  }
+  .linkAPI:hover{
+      color: #a3fcff;
+      padding: .4rem .4rem;
+      border: solid 1px #a3fcff;
+      transition: all ease-in-out .3s;
+      border-radius: 5px;
   }
 
   /*Estilos para el Sidebar del proyecto*/
@@ -33,17 +44,13 @@
     color: #006159;
     width: 100%;
   }
-  a:hover{
-    background: #a3fcff5e;
+  .btnLink:hover{
+    background: #a3fcff75;
     transition: all ease-in-out .3s;
     border: gray 1px solid;
   }
   .labelbtn:hover{
-    /* color: honeydew; */
     transition: all ease-in .2s;
-  }
-  svg:hover{
-    /* color: honeydew; */
   }
 
 
@@ -134,8 +141,6 @@
     fill: #888;
   }
 
- 
-
   .card {
     border-radius: 4px;
     border: 1px solid #eee;
@@ -191,7 +196,6 @@
   a,
   a:visited,
   a:hover {
-    color: #1976d2;
     text-decoration: none;
   }
 
