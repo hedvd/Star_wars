@@ -25,6 +25,7 @@
   .linkAPI{
     font-size: .8rem;
     color:honeydew;
+  
   }
   .linkAPI:hover{
       color: #a3fcff;
@@ -32,7 +33,9 @@
       border: solid 1px #a3fcff;
       transition: all ease-in-out .3s;
       border-radius: 5px;
+      
   }
+  
 
   /*Estilos para el Sidebar del proyecto*/
   .principal{
@@ -256,7 +259,7 @@
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
 
-  footer {
+  /*footer {
     margin-top: 8px;
     display: flex;
     align-items: center;
@@ -266,7 +269,7 @@
   footer a {
     display: flex;
     align-items: center;
-  }
+  }*/
 
   .github-star-badge {
     color: #24292e;
