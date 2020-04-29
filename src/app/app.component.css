@@ -3,6 +3,7 @@
   /*Estilos para el Header del proyecto*/
   .header{
     box-shadow: #c6d3c6 0px 3px 5px;
+    z-index: 1;
   }
   .logo{
     padding-left: 2rem;
@@ -35,11 +36,30 @@
       border-radius: 5px;
       
   }
-  
 
+  /*Estilos contenedor central de trabajo del proyecto*/
+  .section {
+    position: absolute;
+    top: 15%;
+  }
   /*Estilos para el Sidebar del proyecto*/
-  .principal{
+  .card-container {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 16px;
+   }
+  .content {
+    width: 18%;
+    /* background: lawngreen; */
     border-right: #0061595d 1px solid;
+  }
+  .tituloAside {
+    width: 100%;
+    font-size: 1.4rem;
+    padding-bottom: 1.5rem;
+    font-family: 'Baloo 2';
+    font-weight: 600;
   }
   .labelbtn{
     font-family: 'Baloo 2';
@@ -56,8 +76,12 @@
     transition: all ease-in .2s;
   }
 
-
-
+  /*Estilos para el Section Principal del proyecto*/
+  .content2 {
+    /* background-color: hotpink; */
+    width: 82%;
+    height: 29rem;
+  }
 
   /*Clases y elementos a reutilizar del archivo original*/
   
@@ -103,32 +127,6 @@
   .toolbar img {
     margin: 0 16px;
   }
-
-  .toolbar #twitter-logo {
-    height: 40px;
-    margin: 0 16px;
-  }
-
-  .toolbar #twitter-logo:hover {
-    opacity: 0.8;
-  }
-
-  .content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 8px;
-    max-width: 280px;
-    flex-direction: column;
-    align-items: left;
-    float: left;
-   }
-
-  .card-container {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    margin-top: 16px;
-   }
 
 
   svg.material-icons {
@@ -258,18 +256,6 @@
     transform: translateY(-0.25rem);
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   }
-
-  /*footer {
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    line-height: 20px;
-  }
-
-  footer a {
-    display: flex;
-    align-items: center;
-  }*/
 
   .github-star-badge {
     color: #24292e;
