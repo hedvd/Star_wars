@@ -20,43 +20,43 @@
 
 <div class="section d-flex w-100 justify-content-center align-items-center" role="main">
   <!-- Contenedor Aside izquierdo -->
-  <div class="card-container content pl-3">
+  <div class="card-container content pl-3" (click)="botonPresionado($event)">
     <div class="d-flex align-items-center tituloAside">
       Opciones de Consulta
     </div>
 
     <a class="card btnLink" target="_blank" rel="noopener">
-      <span class="flex-grow-1 labelbtn">Personajes</span>
+      <span class="flex-grow-1 labelbtn" id="people">Personajes</span>
       <svg class="material-icons" width="24" height="24" viewBox="0 0 24 24">
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" /></svg>
     </a>
 
     <a class="card btnLink" target="_blank" rel="noopener">
-      <span class="flex-grow-1 labelbtn">Películas</span>
+      <span class="flex-grow-1 labelbtn" id="films">Películas</span>
       <svg class="material-icons" width="24" height="24" viewBox="0 0 24 24">
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" /></svg>
     </a>
 
     <a class="card btnLink" target="_blank" rel="noopener">
-      <span class="flex-grow-1 labelbtn">Naves espaciales</span>
+      <span class="flex-grow-1 labelbtn" id="starships">Naves espaciales</span>
       <svg class="material-icons" width="24" height="24" viewBox="0 0 24 24">
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" /></svg>
     </a>
 
     <a class="card btnLink" target="_blank" rel="noopener">
-      <span class="flex-grow-1 labelbtn">Vehículos</span>
+      <span class="flex-grow-1 labelbtn" id="vehicles">Vehículos</span>
       <svg class="material-icons" width="24" height="24" viewBox="0 0 24 24">
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" /></svg>
     </a>
 
     <a class="card btnLink" target="_blank" rel="noopener">
-      <span class="flex-grow-1 labelbtn">Planetas</span>
+      <span class="flex-grow-1 labelbtn" id="planets">Planetas</span>
       <svg class="material-icons" width="24" height="24" viewBox="0 0 24 24">
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" /></svg>
     </a>
 
     <a class="card btnLink" target="_blank" rel="noopener">
-      <span class="flex-grow-1 labelbtn">Especies o razas</span>
+      <span class="flex-grow-1 labelbtn" id="species">Especies o razas</span>
       <svg class="material-icons" width="24" height="24" viewBox="0 0 24 24">
         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" /></svg>
     </a>
