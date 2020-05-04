@@ -45,6 +45,9 @@ export class DatosAPIService {
         console.log(error);
       })
   }
+  /**
+   * Metodo para pintar la información en el contenedor principal
+   */
   pintarCards(datos){
     
   }
