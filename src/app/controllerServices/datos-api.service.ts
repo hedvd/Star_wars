@@ -35,10 +35,17 @@ export class DatosAPIService {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
+        /**
+         * Una vez obtenidos los datos llamar el metodo que se encargará 
+         * de mostrar la información en cards dentro del contenedor principal 
+         */
+        this.pintarCards(data);
       })
       .catch((error) => {
         console.log(error);
       })
+  }
+  pintarCards(datos){
+    
   }
 }
