@@ -51,7 +51,7 @@
    }
   .content {
     width: 18%;
-    /* background: lawngreen; */
+    /* position: fixed; */
     border-right: #0061595d 1px solid;
   }
   .tituloAside {
@@ -78,10 +78,20 @@
 
   /*Estilos para el Section Principal del proyecto*/
   .content2 {
-    /* background-color: hotpink; */
     width: 82%;
     height: 29rem;
   }
+  .contenedorCentral {
+    width: 95%;
+    height: 100%;
+  }
+  .contenedor {
+    background : "#30475e";
+    padding : .8rem;
+    border-radius: .8rem;
+  }
+
+
 
   /*Clases y elementos a reutilizar del archivo original*/
   

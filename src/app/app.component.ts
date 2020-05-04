@@ -32,8 +32,10 @@ export class AppComponent {
      */
     if(e.target.nodeName === "SPAN") {
       item = e.target.id;
+
     } else {
       item = e.target.children[0].id;
+
     }
 
     /**
