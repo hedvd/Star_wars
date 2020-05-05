@@ -54,13 +54,25 @@ export class DatosAPIService {
             this.pintarNavesEspaciales(data);
             break;
           }
+           
           case 'vehicles':{
             this.pintarVehiculos(data);
             break;
           }
+            
+          case 'planets': {
+            this.pintarPlanetas(data);
+            break;
+          }
+          case 'species': {
+            this.pintarEspecies(data);
+            break;
+          }
+
+     
 
           default: {
-            alert('No hay datos que mostrar !!');
+            alert('La opción seleccionada no contiene información que mostrar!!');
             break;
           }
         } 
@@ -80,7 +92,7 @@ export class DatosAPIService {
    */
   pintarPersonajes(datos){
     const contenedor = document.getElementById('contenedorCards');
-    let templateHTML = ""
+    let templateHTML = "";
 
     for (let i = 0; i < datos.results.length; i++) {
       
@@ -104,6 +116,7 @@ export class DatosAPIService {
     contenedor.style.background = "#dbdbdb";
     contenedor.style.padding = ".8rem";
     contenedor.style.borderRadius = ".8rem";
+    // Agregar el template literal al contenedor que deseamos mostrar la información
     document.querySelector('#contenedorCards').innerHTML = templateHTML;
   }
 
@@ -115,7 +128,7 @@ export class DatosAPIService {
    */
   pintarPeliculas(datos){
     const contenedor = document.getElementById('contenedorCards');
-    let templateHTML = ""
+    let templateHTML = "";
 
     for (let i = 0; i < datos.results.length; i++) {
       
@@ -139,17 +152,18 @@ export class DatosAPIService {
     contenedor.style.background = "#dbdbdb";
     contenedor.style.padding = ".8rem";
     contenedor.style.borderRadius = ".8rem";
+    // Agregar el template literal al contenedor que deseamos mostrar la información
     document.querySelector('#contenedorCards').innerHTML = templateHTML;
   }
 
   /**
-   * Metodo para pintar la información de Películas en el contenedor principal
+   * Metodo para pintar la información de Naves Espaciales en el contenedor principal
    *  => Recibe los datos del endpoint people de la API Starwars
    * @param datos 
    */
   pintarNavesEspaciales(datos){
     const contenedor = document.getElementById('contenedorCards');
-    let templateHTML = ""
+    let templateHTML = "";
 
     for (let i = 0; i < datos.results.length; i++) {
       
@@ -160,6 +174,8 @@ export class DatosAPIService {
             <h5 class="card-title border-bottom pb-1">${datos.results[i].name}</h5>
             <p class="card-text">
               <span class="font-weight-bolder">Modelo : </span> ${datos.results[i].model}.<br />
+              <span class="font-weight-bolder">Tripulación : </span> ${datos.results[i].crew}.<br />
+              <span class="font-weight-bolder">Cant. Pasajeros : </span> ${datos.results[i].passengers}.<br />
               <span class="font-weight-bolder">Velocidad Estelar : </span> ${datos.results[i].MGLT}.<br />
               <span class="font-weight-bolder">Largo : </span> ${datos.results[i].length} m.<br />
               <span class="font-weight-bolder">Capacida de carga : </span> ${datos.results[i].cargo_capacity}<br />
@@ -175,6 +191,49 @@ export class DatosAPIService {
     contenedor.style.background = "#dbdbdb";
     contenedor.style.padding = ".8rem";
     contenedor.style.borderRadius = ".8rem";
+    // Agregar el template literal al contenedor que deseamos mostrar la información
+    document.querySelector('#contenedorCards').innerHTML = templateHTML;
+  }
+
+
+  /**
+   * Metodo para pintar la información de Planetas en el contenedor principal
+   *  => Recibe los datos del endpoint people de la API Starwars
+   * @param datos 
+   */
+  pintarPlanetas(datos){
+    const contenedor = document.getElementById('contenedorCards');
+    let templateHTML = "";
+
+    for (let i = 0; i < datos.results.length; i++) {
+      
+      // Insertar template que se va a mostrar
+      templateHTML += `
+        <div class="card mb-4" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title border-bottom pb-1">${datos.results[i].name}</h5>
+            <p class="card-text">
+              <span class="font-weight-bolder">Población : </span> ${datos.results[i].population}<br />
+              <span class="font-weight-bolder">Terreno : </span> ${datos.results[i].terrain}<br />
+              <span class="font-weight-bolder">Clima : </span> ${datos.results[i].climate}.<br />
+              <span class="font-weight-bolder">Diámetro : </span> ${datos.results[i].diameter}.<br />
+              <span class="font-weight-bolder">Gravedad : </span> ${datos.results[i].gravity}.<br />
+              <span class="font-weight-bolder">Período orbital : </span> ${datos.results[i].orbital_period}.<br />
+              <span class="font-weight-bolder">Período rotación : </span> ${datos.results[i].rotation_period}.<br />
+              <span class="font-weight-bolder">Agua en superficie : </span> ${datos.results[i].surface_water}.
+            </p>
+          </div>
+        </div>
+      `;
+    }
+
+    /**
+     * Estilos para el contenedor principal
+     */
+    contenedor.style.background = "#dbdbdb";
+    contenedor.style.padding = ".8rem";
+    contenedor.style.borderRadius = ".8rem";
+    // Agregar el template literal al contenedor que deseamos mostrar la información
     document.querySelector('#contenedorCards').innerHTML = templateHTML;
   }
   /**
@@ -213,5 +272,46 @@ export class DatosAPIService {
     document.querySelector('#contenedorCards').innerHTML = templateHTML;
   }
 
+
+  /**
+   * Metodo para pintar la información de Planetas en el contenedor principal
+   *  => Recibe los datos del endpoint people de la API Starwars
+   * @param datos 
+   */
+  pintarEspecies(datos){
+    const contenedor = document.getElementById('contenedorCards');
+    let templateHTML = "";
+
+    for (let i = 0; i < datos.results.length; i++) {
+      
+      // Insertar template que se va a mostrar
+      templateHTML += `
+        <div class="card mb-4" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title border-bottom pb-1">${datos.results[i].name}</h5>
+            <p class="card-text">
+              <span class="font-weight-bolder">Lenguaje : </span> ${datos.results[i].language}.<br />
+              <span class="font-weight-bolder">Altura Media : </span> ${datos.results[i].average_height} m.<br />
+              <span class="font-weight-bolder">Promedio de vida : </span> ${datos.results[i].average_lifespan}<br />
+              <span class="font-weight-bolder">Color Ojos : </span> ${datos.results[i].eye_colors}.<br />
+              <span class="font-weight-bolder">Color Cabello : </span> ${datos.results[i].hair_colors}.<br />
+              <span class="font-weight-bolder">Color de Piel : </span> ${datos.results[i].skin_colors}.<br />
+              <span class="font-weight-bolder">Denominación : </span> ${datos.results[i].designation}.<br />
+              <span class="font-weight-bolder">Clasificación : </span> ${datos.results[i].classification}.
+            </p>
+          </div>
+        </div>
+      `;
+    }
+
+    /**
+     * Estilos para el contenedor principal
+     */
+    contenedor.style.background = "#dbdbdb";
+    contenedor.style.padding = ".8rem";
+    contenedor.style.borderRadius = ".8rem";
+    // Agregar el template literal al contenedor que deseamos mostrar la información
+    document.querySelector('#contenedorCards').innerHTML = templateHTML;
+  }
 
 }
