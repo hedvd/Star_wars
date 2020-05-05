@@ -93,6 +93,9 @@ export class DatosAPIService {
   pintarPersonajes(datos){
     const contenedor = document.getElementById('contenedorCards');
     let templateHTML = "";
+    let titulo = `
+      <div class="w-100 d-flex justify-content-center align-items-center font-weight-bold mb-4" style="font-size: 2.5rem; text-shadow: #649d66 1px 2px 3px;"> Personajes </div>
+    `;
 
     for (let i = 0; i < datos.results.length; i++) {
       
@@ -117,7 +120,7 @@ export class DatosAPIService {
     contenedor.style.padding = ".8rem";
     contenedor.style.borderRadius = ".8rem";
     // Agregar el template literal al contenedor que deseamos mostrar la información
-    document.querySelector('#contenedorCards').innerHTML = templateHTML;
+    document.querySelector('#contenedorCards').innerHTML = titulo + templateHTML;
   }
 
 
@@ -129,6 +132,9 @@ export class DatosAPIService {
   pintarPeliculas(datos){
     const contenedor = document.getElementById('contenedorCards');
     let templateHTML = "";
+    let titulo = `
+      <div class="w-100 d-flex justify-content-center align-items-center font-weight-bold mb-4" style="font-size: 2.5rem; text-shadow: #649d66 1px 2px 3px;"> Películas </div>
+    `;
 
     for (let i = 0; i < datos.results.length; i++) {
       
@@ -153,7 +159,7 @@ export class DatosAPIService {
     contenedor.style.padding = ".8rem";
     contenedor.style.borderRadius = ".8rem";
     // Agregar el template literal al contenedor que deseamos mostrar la información
-    document.querySelector('#contenedorCards').innerHTML = templateHTML;
+    document.querySelector('#contenedorCards').innerHTML = titulo + templateHTML;
   }
 
   /**
@@ -164,6 +170,9 @@ export class DatosAPIService {
   pintarNavesEspaciales(datos){
     const contenedor = document.getElementById('contenedorCards');
     let templateHTML = "";
+    let titulo = `
+      <div class="w-100 d-flex justify-content-center align-items-center font-weight-bold mb-4" style="font-size: 2.5rem; text-shadow: #649d66 1px 2px 3px;"> Naves Espaciales </div>
+    `;
 
     for (let i = 0; i < datos.results.length; i++) {
       
@@ -192,7 +201,7 @@ export class DatosAPIService {
     contenedor.style.padding = ".8rem";
     contenedor.style.borderRadius = ".8rem";
     // Agregar el template literal al contenedor que deseamos mostrar la información
-    document.querySelector('#contenedorCards').innerHTML = templateHTML;
+    document.querySelector('#contenedorCards').innerHTML = titulo + templateHTML;
   }
 
 
@@ -204,6 +213,9 @@ export class DatosAPIService {
   pintarPlanetas(datos){
     const contenedor = document.getElementById('contenedorCards');
     let templateHTML = "";
+    let titulo = `
+      <div class="w-100 d-flex justify-content-center align-items-center font-weight-bold mb-4" style="font-size: 2.5rem; text-shadow: #649d66 1px 2px 3px;"> Planetas </div>
+    `;
 
     for (let i = 0; i < datos.results.length; i++) {
       
@@ -234,7 +246,7 @@ export class DatosAPIService {
     contenedor.style.padding = ".8rem";
     contenedor.style.borderRadius = ".8rem";
     // Agregar el template literal al contenedor que deseamos mostrar la información
-    document.querySelector('#contenedorCards').innerHTML = templateHTML;
+    document.querySelector('#contenedorCards').innerHTML = titulo + templateHTML;
   }
   /**
    * Metodo para pintar la información de los vehiculos en el contenedor principal
@@ -243,7 +255,10 @@ export class DatosAPIService {
    */
   pintarVehiculos(datos){
     const contenedor = document.getElementById('contenedorCards');
-    let templateHTML = ""
+    let templateHTML = "";
+    let titulo = `
+      <div class="w-100 d-flex justify-content-center align-items-center font-weight-bold mb-4" style="font-size: 2.5rem; text-shadow: #649d66 1px 2px 3px;"> Vehículos </div>
+    `;
 
     for (let i = 0; i < datos.results.length; i++) {
       
@@ -269,7 +284,7 @@ export class DatosAPIService {
     contenedor.style.background = "#dbdbdb";
     contenedor.style.padding = ".8rem";
     contenedor.style.borderRadius = ".8rem";
-    document.querySelector('#contenedorCards').innerHTML = templateHTML;
+    document.querySelector('#contenedorCards').innerHTML = titulo + templateHTML;
   }
 
 
@@ -281,6 +296,9 @@ export class DatosAPIService {
   pintarEspecies(datos){
     const contenedor = document.getElementById('contenedorCards');
     let templateHTML = "";
+    let titulo = `
+      <div class="w-100 d-flex justify-content-center align-items-center font-weight-bold mb-4" style="font-size: 2.5rem; text-shadow: #649d66 1px 2px 3px;"> Especies </div>
+    `;
 
     for (let i = 0; i < datos.results.length; i++) {
       
@@ -311,7 +329,7 @@ export class DatosAPIService {
     contenedor.style.padding = ".8rem";
     contenedor.style.borderRadius = ".8rem";
     // Agregar el template literal al contenedor que deseamos mostrar la información
-    document.querySelector('#contenedorCards').innerHTML = templateHTML;
+    document.querySelector('#contenedorCards').innerHTML = titulo + templateHTML;
   }
 
 }
