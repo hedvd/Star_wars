@@ -54,7 +54,10 @@ export class DatosAPIService {
             this.pintarNavesEspaciales(data);
             break;
           }
-
+          case 'vehicles':{
+            this.pintarVehiculos(data);
+            break;
+          }
 
           default: {
             alert('No hay datos que mostrar !!');
@@ -139,7 +142,6 @@ export class DatosAPIService {
     document.querySelector('#contenedorCards').innerHTML = templateHTML;
   }
 
-
   /**
    * Metodo para pintar la información de Películas en el contenedor principal
    *  => Recibe los datos del endpoint people de la API Starwars
@@ -162,6 +164,41 @@ export class DatosAPIService {
               <span class="font-weight-bolder">Largo : </span> ${datos.results[i].length} m.<br />
               <span class="font-weight-bolder">Capacida de carga : </span> ${datos.results[i].cargo_capacity}<br />
               <span class="font-weight-bolder">Versión hiperimpulsor : </span> ${datos.results[i].hyperdrive_rating}.<br />
+              <span class="font-weight-bolder">Fabricante : </span> ${datos.results[i].manufacturer}.<br />
+              <span class="font-weight-bolder">Velocidad en Atmosfera : </span> ${datos.results[i].max_atmosphering_speed}.
+            </p>
+          </div>
+        </div>
+      `;
+    }
+
+    contenedor.style.background = "#dbdbdb";
+    contenedor.style.padding = ".8rem";
+    contenedor.style.borderRadius = ".8rem";
+    document.querySelector('#contenedorCards').innerHTML = templateHTML;
+  }
+  /**
+   * Metodo para pintar la información de los vehiculos en el contenedor principal
+   *  => Recibe los datos del endpoint people de la API Starwars
+   * @param datos 
+   */
+  pintarVehiculos(datos){
+    const contenedor = document.getElementById('contenedorCards');
+    let templateHTML = ""
+
+    for (let i = 0; i < datos.results.length; i++) {
+      
+      // Insertar template que se va a mostrar
+      templateHTML += `
+        <div class="card mb-4" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title border-bottom pb-1">${datos.results[i].name}</h5>
+            <p class="card-text">
+              <span class="font-weight-bolder">Modelo : </span> ${datos.results[i].model}.<br />
+              <span class="font-weight-bolder">Tripulación : </span> ${datos.results[i].crew}.<br />
+              <span class="font-weight-bolder">Cant. Pasajeros : </span> ${datos.results[i].passengers} m.<br />
+              <span class="font-weight-bolder">Largo : </span> ${datos.results[i].length} m.<br />
+              <span class="font-weight-bolder">Capacidad de carga : </span> ${datos.results[i].cargo_capacity}.<br />
               <span class="font-weight-bolder">Fabricante : </span> ${datos.results[i].manufacturer}.<br />
               <span class="font-weight-bolder">Velocidad en Atmosfera : </span> ${datos.results[i].max_atmosphering_speed}.
             </p>
