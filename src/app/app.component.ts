@@ -14,7 +14,12 @@ export class AppComponent {
    * con el fin de usar sus funcionalidades
    * @param apiStarwars 
    */
-  constructor(private apiStarwars: DatosAPIService) { }
+  constructor(private apiStarwars: DatosAPIService) { 
+    /**
+     * Cargar un método de inicio para que no sea vea vacía cuando cargue por primera vez
+     */
+    window.addEventListener('load', this.apiStarwars.pintarInicio);
+  }
   
   /**
    * Método para obtener el id del botón presionado en el aside.

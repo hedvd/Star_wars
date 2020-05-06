@@ -69,19 +69,33 @@ export class DatosAPIService {
             break;
           }
 
-     
-
           default: {
             alert('La opción seleccionada no contiene información que mostrar!!');
             break;
           }
         } 
-        
-        console.log(data);
       })
       .catch((error) => {
         console.log(error);
       })
+  }
+
+
+  /**
+  * Método de inicio para que no sea vea vacía cuando cargue por primera vez
+  * la página en el navegador
+  */
+  pintarInicio() {
+    const contenedor = document.getElementById('contenedorCards');
+    let inicio = `
+        <img src="assets/pictures/fondoStars.jpg" class="w-100 h-100" style="background-size: cover;">
+    `;
+
+    contenedor.style.background = "#00000031";
+    contenedor.style.padding = ".8rem";
+    contenedor.style.borderRadius = ".5rem";
+    document.querySelector('#contenedorCards').innerHTML = inicio;
+    console.log(document.querySelector('#contenedorCards'));
   }
 
 
