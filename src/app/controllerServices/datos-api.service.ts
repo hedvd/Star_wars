@@ -68,19 +68,12 @@ export class DatosAPIService {
             this.pintarEspecies(data);
             break;
           }
-
-          default: {
-            alert('La opción seleccionada no contiene información que mostrar!!');
-            break;
-          }
         } 
       })
       .catch((error) => {
         console.log(error);
       })
   }
-
-
   /**
   * Método de inicio para que no sea vea vacía cuando cargue por primera vez
   * la página en el navegador
@@ -210,15 +203,12 @@ export class DatosAPIService {
         </div>
       `;
     }
-
     contenedor.style.background = "#dbdbdb";
     contenedor.style.padding = ".8rem";
     contenedor.style.borderRadius = ".8rem";
     // Agregar el template literal al contenedor que deseamos mostrar la información
     document.querySelector('#contenedorCards').innerHTML = titulo + templateHTML;
   }
-
-
   /**
    * Metodo para pintar la información de Planetas en el contenedor principal
    *  => Recibe los datos del endpoint people de la API Starwars
