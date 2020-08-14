@@ -69,12 +69,6 @@ export class DatosAPIService {
             break;
           }
 
-     
-
-          default: {
-            alert('La opción seleccionada no contiene información que mostrar!!');
-            break;
-          }
         } 
         
         console.log(data);
@@ -83,8 +77,6 @@ export class DatosAPIService {
         console.log(error);
       })
   }
-
-
   /**
    * Metodo para pintar la información de Personajes en el contenedor principal
    *  => Recibe los datos del endpoint people de la API Starwars
@@ -187,15 +179,12 @@ export class DatosAPIService {
         </div>
       `;
     }
-
     contenedor.style.background = "#dbdbdb";
     contenedor.style.padding = ".8rem";
     contenedor.style.borderRadius = ".8rem";
     // Agregar el template literal al contenedor que deseamos mostrar la información
     document.querySelector('#contenedorCards').innerHTML = templateHTML;
   }
-
-
   /**
    * Metodo para pintar la información de Planetas en el contenedor principal
    *  => Recibe los datos del endpoint people de la API Starwars
